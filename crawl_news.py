@@ -11,7 +11,7 @@ URL = "https://m.etnews.com/news/hot_content_list.html"
 res = requests.get(URL)
 soup = BeautifulSoup(res.text, 'html.parser')
 
-# 3. "SW 많이 본 뉴스" 상위 5개 추출
+# 3. "SW 많이 본 뉴스" 상위 5개 추출..
 topnews_section= soup.select_one("section.textthumb")
 most_viewed = topnews_section.select('ul li strong a')[:10]
 
